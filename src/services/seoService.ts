@@ -1,10 +1,17 @@
 import { TOOLS_DATA } from '../data/toolsData';
 import { Language, ToolDefinition } from '../types';
+import { StorageService } from './storage';
 
 export const SeoService = {
+  getBaseUrl(): string {
+    const s = StorageService.getSettings();
+    return s.siteBaseUrl || (typeof window !== 'undefined' ? window.location.origin : 'https://smarttools.app');
+  },
+
   // Generate JSON-LD Structured Data
-  generateToolSchema(tool: ToolDefinition, lang: Language, baseUrl: string = 'https://smarttools.app') {
-    const pageUrl = `${baseUrl}/tool/${tool.slug}?lang=${lang}`;
+  generateToolSchema(tool: ToolDefinition, lang: Language, baseUrl?: string) {
+    const effectiveBaseUrl = baseUrl || this.getBaseUrl();
+    const pageUrl = `${effectiveBaseUrl}/tool/${tool.slug}?lang=${lang}`;
     
     // SoftwareApplication Schema
     const softwareAppSchema = {
@@ -63,7 +70,8 @@ export const SeoService = {
   },
 
   // Generate XML Sitemap with multi-lingual alternate hreflang links
-  generateSitemapXml(baseUrl: string = 'https://smarttools.app'): string {
+  generateSitemapXml(baseUrl?: string): string {
+    const effectiveBaseUrl = baseUrl || this.getBaseUrl();
     const staticPages = [
       { path: '', changefreq: 'daily', priority: '1.0' },
       { path: '/privacy', changefreq: 'monthly', priority: '0.4' },
@@ -81,14 +89,14 @@ export const SeoService = {
     // Static pages across languages
     staticPages.forEach((p) => {
       languages.forEach((lang) => {
-        const loc = `${baseUrl}${p.path}${p.path.includes('?') ? '&' : '?'}lang=${lang}`;
+        const loc = `${effectiveBaseUrl}${p.path}${p.path.includes('?') ? '&' : '?'}lang=${lang}`;
         xml += `  <url>\n`;
         xml += `    <loc>${loc}</loc>\n`;
         languages.forEach((altLang) => {
-          const altLoc = `${baseUrl}${p.path}${p.path.includes('?') ? '&' : '?'}lang=${altLang}`;
+          const altLoc = `${effectiveBaseUrl}${p.path}${p.path.includes('?') ? '&' : '?'}lang=${altLang}`;
           xml += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${altLoc}" />\n`;
         });
-        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}${p.path}" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${effectiveBaseUrl}${p.path}" />\n`;
         xml += `    <lastmod>${today}</lastmod>\n`;
         xml += `    <changefreq>${p.changefreq}</changefreq>\n`;
         xml += `    <priority>${p.priority}</priority>\n`;
@@ -99,14 +107,14 @@ export const SeoService = {
     // Tool pages across languages
     TOOLS_DATA.forEach((tool) => {
       languages.forEach((lang) => {
-        const loc = `${baseUrl}/tool/${tool.slug}?lang=${lang}`;
+        const loc = `${effectiveBaseUrl}/tool/${tool.slug}?lang=${lang}`;
         xml += `  <url>\n`;
         xml += `    <loc>${loc}</loc>\n`;
         languages.forEach((altLang) => {
-          const altLoc = `${baseUrl}/tool/${tool.slug}?lang=${altLang}`;
+          const altLoc = `${effectiveBaseUrl}/tool/${tool.slug}?lang=${altLang}`;
           xml += `    <xhtml:link rel="alternate" hreflang="${altLang}" href="${altLoc}" />\n`;
         });
-        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/tool/${tool.slug}" />\n`;
+        xml += `    <xhtml:link rel="alternate" hreflang="x-default" href="${effectiveBaseUrl}/tool/${tool.slug}" />\n`;
         xml += `    <lastmod>${today}</lastmod>\n`;
         xml += `    <changefreq>weekly</changefreq>\n`;
         xml += `    <priority>0.8</priority>\n`;
@@ -119,7 +127,8 @@ export const SeoService = {
   },
 
   // Generate robots.txt
-  generateRobotsTxt(baseUrl: string = 'https://smarttools.app'): string {
+  generateRobotsTxt(baseUrl?: string): string {
+    const effectiveBaseUrl = baseUrl || this.getBaseUrl();
     return `# SMARTTOOLS robots.txt
 User-agent: *
 Allow: /
@@ -127,7 +136,7 @@ Disallow: /growth-center
 Disallow: /admin
 
 # Sitemaps
-Sitemap: ${baseUrl}/sitemap.xml
+Sitemap: ${effectiveBaseUrl}/sitemap.xml
 `;
   },
 

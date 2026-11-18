@@ -1,0 +1,7 @@
+# SMARTTOOLS robots.txt
+User-agent: *
+Allow: /
+Disallow: /growth-center
+
+# Sitemaps
+Sitemap: https://smarttools.app/sitemap.xml

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Language } from '../types';
 import { useI18n } from '../i18n/I18nContext';
+import { StorageService } from '../services/storage';
 
 interface SEOHeadProps {
   title: string;
@@ -18,7 +19,8 @@ export const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const { language, dir } = useI18n();
   const location = useLocation();
-  const baseUrl = 'https://smarttools.app';
+  const settings = StorageService.getSettings();
+  const baseUrl = settings.siteBaseUrl || (typeof window !== 'undefined' ? window.location.origin : 'https://smarttools.app');
   const fullCanonical = `${baseUrl}${canonicalPath || location.pathname}`;
 
   useEffect(() => {

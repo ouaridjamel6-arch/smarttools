@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://smarttools.app?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/privacy?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/privacy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/privacy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/privacy?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/privacy" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/privacy?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/privacy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/privacy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/privacy?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/privacy" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/privacy?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/privacy?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/privacy?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/privacy?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/privacy" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/terms?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/terms?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/terms?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/terms" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/terms?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/terms?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/terms?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/terms" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/terms?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/terms?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/terms?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/terms?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/terms" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/about?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/about?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/about?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/about" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/about?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/about?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/about?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/about" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/about?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/about?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/about?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/about" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/contact?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/contact?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/contact" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/contact?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/contact?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/contact" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/contact?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/contact?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/contact?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/contact?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/contact" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/qr-code-generator?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/qr-code-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/qr-code-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/qr-code-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/qr-code-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/qr-code-generator?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/qr-code-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/qr-code-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/qr-code-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/qr-code-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/qr-code-generator?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/qr-code-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/qr-code-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/qr-code-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/qr-code-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/image-compressor?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/image-compressor?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/image-compressor?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/image-compressor?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/image-compressor" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/image-compressor?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/image-compressor?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/image-compressor?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/image-compressor?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/image-compressor" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/image-compressor?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/image-compressor?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/image-compressor?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/image-compressor?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/image-compressor" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/word-counter?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/word-counter?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/word-counter?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/word-counter?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/word-counter" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/word-counter?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/word-counter?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/word-counter?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/word-counter?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/word-counter" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/word-counter?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/word-counter?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/word-counter?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/word-counter?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/word-counter" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/password-generator?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/password-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/password-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/password-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/password-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/password-generator?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/password-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/password-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/password-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/password-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/password-generator?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/password-generator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/password-generator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/password-generator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/password-generator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/json-formatter-validator?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/json-formatter-validator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/json-formatter-validator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/json-formatter-validator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/json-formatter-validator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/json-formatter-validator?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/json-formatter-validator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/json-formatter-validator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/json-formatter-validator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/json-formatter-validator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/json-formatter-validator?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/json-formatter-validator?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/json-formatter-validator?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/json-formatter-validator?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/json-formatter-validator" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/base64-encoder-decoder?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/base64-encoder-decoder?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/base64-encoder-decoder?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/base64-encoder-decoder?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/base64-encoder-decoder" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/base64-encoder-decoder?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/base64-encoder-decoder?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/base64-encoder-decoder?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/base64-encoder-decoder?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/base64-encoder-decoder" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/base64-encoder-decoder?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/base64-encoder-decoder?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/base64-encoder-decoder?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/base64-encoder-decoder?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/base64-encoder-decoder" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/color-converter-palette?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/color-converter-palette?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/color-converter-palette?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/color-converter-palette?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/color-converter-palette" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/color-converter-palette?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/color-converter-palette?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/color-converter-palette?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/color-converter-palette?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/color-converter-palette" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/color-converter-palette?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/color-converter-palette?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/color-converter-palette?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/color-converter-palette?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/color-converter-palette" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/markdown-to-html-previewer?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/markdown-to-html-previewer" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/markdown-to-html-previewer?lang=fr</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/markdown-to-html-previewer" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smarttools.app/tool/markdown-to-html-previewer?lang=ar</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=en" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://smarttools.app/tool/markdown-to-html-previewer?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://smarttools.app/tool/markdown-to-html-previewer" />
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

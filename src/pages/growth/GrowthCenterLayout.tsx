@@ -124,6 +124,11 @@ export const GrowthCenterLayout: React.FC = () => {
             </p>
           </div>
 
+          <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-[11px] text-amber-300 text-left leading-relaxed">
+            <span className="font-bold block text-amber-400 mb-0.5">ℹ️ Transparence & Audit Sécurité :</span>
+            Ce verrou PIN est une barrière d'interface locale dans votre navigateur. Il ne remplace pas une authentification serveur avec session chiffrée. Ne stockez pas de clés de production critiques si votre poste de travail est partagé.
+          </div>
+
           <form onSubmit={handleUnlock} className="space-y-4">
             <input
               type="password"

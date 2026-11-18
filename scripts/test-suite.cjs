@@ -80,6 +80,7 @@ runTest('3. Sitemap.xml & robots.txt Generation Logic', () => {
   assert(content.includes('hreflang="${altLang}"'), 'Sitemap must output dynamic alternate hreflang');
   assert(content.includes("languages: Language[] = ['en', 'fr', 'ar']"), 'Sitemap must cover en, fr, and ar');
   assert(content.includes('Disallow: /growth-center'), 'robots.txt must protect growth center route');
+  assert(content.includes('effectiveBaseUrl'), 'Base URL must be dynamically configurable');
 });
 
 // 4. Test SEO Audit Engine
