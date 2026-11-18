@@ -1,11 +1,12 @@
 import { ContentStyle, GeneratedContent, Language, SocialPlatform, ToolDefinition } from '../types';
+import { SeoService } from './seoService';
 
 export const ContentGenService = {
   generateMarketingContent(
     tool: ToolDefinition,
     platform: SocialPlatform,
     style: ContentStyle,
-    baseUrl: string = 'https://smarttools.app'
+    baseUrl: string = SeoService.getBaseUrl()
   ): GeneratedContent {
     const toolUrl = `${baseUrl}/tool/${tool.slug}`;
     const id = 'gen_' + Date.now();

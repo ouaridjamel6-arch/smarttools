@@ -444,7 +444,7 @@ export const CalendarService = {
       const cleanDesc = (p.content || '').replace(/\n/g, '\\n').replace(/,/g, '\\,');
 
       lines.push('BEGIN:VEVENT');
-      lines.push(`UID:${p.id}@smarttools.app`);
+      lines.push(`UID:${p.id}@smarttools-um7.pages.dev`);
       lines.push(`DTSTAMP:${dtstart}`);
       lines.push(`DTSTART:${dtstart}`);
       lines.push(`SUMMARY:[${p.platform.toUpperCase()}] ${cleanSummary}`);

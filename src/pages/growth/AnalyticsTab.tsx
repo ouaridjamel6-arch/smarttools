@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { AnalyticsService, GscReportSummary, AnalyticsEvent } from '../../services/analyticsService';
 import { StorageService } from '../../services/storage';
+import { SeoService } from '../../services/seoService';
 
 export const AnalyticsTab: React.FC = () => {
   const [gscReport, setGscReport] = useState<GscReportSummary | null>(null);
@@ -203,7 +204,7 @@ export const AnalyticsTab: React.FC = () => {
                 <ol className="list-decimal ml-4 space-y-1 text-slate-600">
                   <li>Visit <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline font-semibold">search.google.com/search-console</a>.</li>
                   <li>Add your domain and verify ownership via DNS TXT record or HTML meta tag.</li>
-                  <li>Submit your sitemap: <code className="bg-white px-1.5 py-0.5 rounded border">https://smarttools.app/sitemap.xml</code>.</li>
+                  <li>Submit your sitemap: <code className="bg-white px-1.5 py-0.5 rounded border">{SeoService.getBaseUrl()}/sitemap.xml</code>.</li>
                   <li>Once Google collects clicks, click "Export" &rarr; "Download CSV" in Search Console and import the file here.</li>
                 </ol>
               </div>

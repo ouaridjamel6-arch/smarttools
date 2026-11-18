@@ -3,6 +3,7 @@ import { Download, Sparkles, Image as ImageIcon, RefreshCw, Palette } from 'luci
 import { TOOLS_DATA } from '../../data/toolsData';
 import { Language, ToolDefinition } from '../../types';
 import { useI18n } from '../../i18n/I18nContext';
+import { SeoService } from '../../services/seoService';
 
 export const VisualCreatorTab: React.FC = () => {
   const { t } = useI18n();
@@ -132,7 +133,8 @@ export const VisualCreatorTab: React.FC = () => {
 
     ctx.fillStyle = '#0F172A';
     ctx.font = 'bold 26px Inter, Cairo, sans-serif';
-    ctx.fillText('👉 smarttools.app', width / 2, ctaY + ctaH / 2);
+    const displayHost = SeoService.getBaseUrl().replace(/^https?:\/\//, '');
+    ctx.fillText(`👉 ${displayHost}`, width / 2, ctaY + ctaH / 2);
   };
 
   // Helper rounded rect

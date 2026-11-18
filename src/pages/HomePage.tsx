@@ -21,6 +21,7 @@ import { TOOLS_DATA } from '../data/toolsData';
 import { SEOHead } from '../components/SEOHead';
 import { AdSenseSlot } from '../components/AdSenseSlot';
 import { ToolDefinition } from '../types';
+import { SeoService } from '../services/seoService';
 
 export const HomePage: React.FC = () => {
   const { t, language } = useI18n();
@@ -51,15 +52,16 @@ export const HomePage: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
+  const baseUrl = SeoService.getBaseUrl();
   const homeSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     'name': 'SMARTTOOLS',
-    'url': 'https://smarttools.app',
+    'url': baseUrl,
     'description': t('hero.subtitle'),
     'potentialAction': {
       '@type': 'SearchAction',
-      'target': 'https://smarttools.app/?q={search_term_string}',
+      'target': `${baseUrl}/?q={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   };

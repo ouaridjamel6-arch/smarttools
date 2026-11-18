@@ -22,7 +22,7 @@ const STORAGE_KEYS = {
 
 export const DEFAULT_SETTINGS: GrowthSettings = {
   adminPin: '',
-  siteBaseUrl: 'https://smarttools.app',
+  siteBaseUrl: 'https://smarttools-um7.pages.dev',
   gaMeasurementId: '',
   adsensePublisherId: '',
   defaultLanguage: 'en',
@@ -91,7 +91,11 @@ export const StorageService = {
     const raw = localStorage.getItem(STORAGE_KEYS.SETTINGS);
     if (!raw) return DEFAULT_SETTINGS;
     try {
-      return { ...DEFAULT_SETTINGS, ...JSON.parse(raw) };
+      const parsed = JSON.parse(raw);
+      if (parsed.siteBaseUrl === 'https://smarttools.app') {
+        parsed.siteBaseUrl = DEFAULT_SETTINGS.siteBaseUrl;
+      }
+      return { ...DEFAULT_SETTINGS, ...parsed };
     } catch {
       return DEFAULT_SETTINGS;
     }

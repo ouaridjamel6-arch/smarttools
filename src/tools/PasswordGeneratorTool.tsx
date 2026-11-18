@@ -69,10 +69,10 @@ export const PasswordGeneratorTool: React.FC = () => {
     if (includeNumbers) score += 1;
     if (includeSymbols) score += 1;
 
-    if (score <= 2) return { label: 'Weak', color: 'bg-rose-500', text: 'text-rose-600', percent: 25 };
-    if (score <= 4) return { label: 'Medium', color: 'bg-amber-500', text: 'text-amber-600', percent: 60 };
-    if (score <= 5) return { label: 'Strong', color: 'bg-emerald-500', text: 'text-emerald-600', percent: 85 };
-    return { label: 'Military Grade', color: 'bg-indigo-600', text: 'text-indigo-600', percent: 100 };
+    if (score <= 2) return { label: language === 'ar' ? 'ضعيف' : language === 'fr' ? 'Faible' : 'Weak', color: 'bg-rose-500', text: 'text-rose-600', percent: 25 };
+    if (score <= 4) return { label: language === 'ar' ? 'متوسط' : language === 'fr' ? 'Moyen' : 'Medium', color: 'bg-amber-500', text: 'text-amber-600', percent: 60 };
+    if (score <= 5) return { label: language === 'ar' ? 'قوي' : language === 'fr' ? 'Robuste' : 'Strong', color: 'bg-emerald-500', text: 'text-emerald-600', percent: 85 };
+    return { label: language === 'ar' ? 'عسكري فائق الحماية' : language === 'fr' ? 'Niveau Militaire' : 'Military Grade', color: 'bg-indigo-600', text: 'text-indigo-600', percent: 100 };
   };
 
   const strength = getStrength();
@@ -83,15 +83,19 @@ export const PasswordGeneratorTool: React.FC = () => {
       <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 shadow-sm space-y-4">
         <div className="relative flex items-center bg-slate-50 dark:bg-slate-800 p-4 rounded-2xl border border-slate-200">
           <input
+            id="generated-password-display"
+            name="generatedPassword"
             type="text"
             readOnly
             value={password}
+            aria-label={language === 'ar' ? 'كلمة المرور المولدة' : language === 'fr' ? 'Mot de passe généré' : 'Generated password'}
             className="w-full bg-transparent font-mono text-xl sm:text-2xl text-slate-800 dark:text-slate-100 font-bold outline-none tracking-wider pr-24"
           />
           <div className="absolute right-3 flex items-center gap-2">
             <button
               onClick={generatePassword}
-              title="Regenerate"
+              title={language === 'ar' ? 'إعادة توليد' : language === 'fr' ? 'Régénérer' : 'Regenerate'}
+              aria-label={language === 'ar' ? 'إعادة توليد كلمة المرور' : language === 'fr' ? 'Régénérer le mot de passe' : 'Regenerate password'}
               className="p-2.5 rounded-xl hover:bg-slate-200 text-slate-600 transition"
             >
               <RefreshCw className="w-5 h-5" />
@@ -125,10 +129,12 @@ export const PasswordGeneratorTool: React.FC = () => {
       <div className="bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 shadow-sm space-y-6">
         <div>
           <div className="flex justify-between text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2">
-            <span>{language === 'ar' ? 'طول كلمة السر' : language === 'fr' ? 'Longueur du mot de passe' : 'Password Length'}</span>
-            <span className="font-mono text-indigo-600 text-base font-bold">{length} chars</span>
+            <label htmlFor="password-length-slider">{language === 'ar' ? 'طول كلمة السر' : language === 'fr' ? 'Longueur du mot de passe' : 'Password Length'}</label>
+            <span className="font-mono text-indigo-600 text-base font-bold">{length} {language === 'ar' ? 'حرفاً' : language === 'fr' ? 'caractères' : 'chars'}</span>
           </div>
           <input
+            id="password-length-slider"
+            name="passwordLength"
             type="range"
             min={8}
             max={64}
@@ -140,16 +146,19 @@ export const PasswordGeneratorTool: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           {[
-            { id: 'upper', label: language === 'ar' ? 'حروف كبيرة (A-Z)' : language === 'fr' ? 'Majuscules (A-Z)' : 'Uppercase (A-Z)', val: includeUpper, set: setIncludeUpper },
-            { id: 'lower', label: language === 'ar' ? 'حروف صغيرة (a-z)' : language === 'fr' ? 'Minuscules (a-z)' : 'Lowercase (a-z)', val: includeLower, set: setIncludeLower },
-            { id: 'numbers', label: language === 'ar' ? 'أرقام (0-9)' : language === 'fr' ? 'Chiffres (0-9)' : 'Numbers (0-9)', val: includeNumbers, set: setIncludeNumbers },
-            { id: 'symbols', label: language === 'ar' ? 'رموز خاصة (!@#$)' : language === 'fr' ? 'Symboles (!@#$)' : 'Symbols (!@#$)', val: includeSymbols, set: setIncludeSymbols },
+            { id: 'include-upper', name: 'includeUpper', label: language === 'ar' ? 'حروف كبيرة (A-Z)' : language === 'fr' ? 'Majuscules (A-Z)' : 'Uppercase (A-Z)', val: includeUpper, set: setIncludeUpper },
+            { id: 'include-lower', name: 'includeLower', label: language === 'ar' ? 'حروف صغيرة (a-z)' : language === 'fr' ? 'Minuscules (a-z)' : 'Lowercase (a-z)', val: includeLower, set: setIncludeLower },
+            { id: 'include-numbers', name: 'includeNumbers', label: language === 'ar' ? 'أرقام (0-9)' : language === 'fr' ? 'Chiffres (0-9)' : 'Numbers (0-9)', val: includeNumbers, set: setIncludeNumbers },
+            { id: 'include-symbols', name: 'includeSymbols', label: language === 'ar' ? 'رموز خاصة (!@#$)' : language === 'fr' ? 'Symboles (!@#$)' : 'Symbols (!@#$)', val: includeSymbols, set: setIncludeSymbols },
           ].map((opt) => (
             <label
+              htmlFor={opt.id}
               key={opt.id}
               className="flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition select-none"
             >
               <input
+                id={opt.id}
+                name={opt.name}
                 type="checkbox"
                 checked={opt.val}
                 onChange={(e) => opt.set(e.target.checked)}
@@ -160,8 +169,10 @@ export const PasswordGeneratorTool: React.FC = () => {
           ))}
         </div>
 
-        <label className="flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition select-none">
+        <label htmlFor="exclude-ambiguous" className="flex items-center gap-3 p-3.5 rounded-xl border border-slate-200 hover:bg-slate-50 cursor-pointer transition select-none">
           <input
+            id="exclude-ambiguous"
+            name="excludeAmbiguous"
             type="checkbox"
             checked={excludeAmbiguous}
             onChange={(e) => setExcludeAmbiguous(e.target.checked)}

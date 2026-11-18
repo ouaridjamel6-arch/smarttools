@@ -131,6 +131,8 @@ export const GrowthCenterLayout: React.FC = () => {
 
           <form onSubmit={handleUnlock} className="space-y-4">
             <input
+              id="admin-pin-input"
+              name="adminPin"
               type="password"
               autoFocus
               maxLength={12}
@@ -140,6 +142,7 @@ export const GrowthCenterLayout: React.FC = () => {
                 setPinError(null);
               }}
               placeholder={hasPin ? '••••••••' : 'Choose 4-8 digit PIN'}
+              aria-label={hasPin ? 'Code PIN de sécurité' : 'Choisir un code PIN de sécurité'}
               className="w-full text-center tracking-widest text-2xl font-mono px-4 py-3.5 rounded-2xl bg-slate-900 border border-slate-700 text-white outline-none focus:border-indigo-500 transition"
             />
 

@@ -4,4 +4,4 @@ Allow: /
 Disallow: /growth-center
 
 # Sitemaps
-Sitemap: https://smarttools.app/sitemap.xml
+Sitemap: https://smarttools-um7.pages.dev/sitemap.xml

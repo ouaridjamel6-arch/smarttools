@@ -118,10 +118,13 @@ export const ImageCompressorTool: React.FC = () => {
           className="border-2 border-dashed border-indigo-300 hover:border-indigo-500 rounded-3xl p-12 text-center bg-indigo-50/50 hover:bg-indigo-50 transition cursor-pointer flex flex-col items-center justify-center group"
         >
           <input
+            id="image-compressor-file-input"
+            name="imageFile"
             type="file"
             ref={fileInputRef}
             onChange={(e) => e.target.files?.[0] && handleFileChange(e.target.files[0])}
             accept="image/*"
+            aria-label={language === 'ar' ? 'اختيار صورة لضغطها' : language === 'fr' ? 'Sélectionner une image à compresser' : 'Choose an image to compress'}
             className="hidden"
           />
           <div className="w-16 h-16 rounded-2xl bg-indigo-600 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition shadow-lg shadow-indigo-200">
@@ -186,10 +189,12 @@ export const ImageCompressorTool: React.FC = () => {
             {/* Quality Slider */}
             <div>
               <div className="flex justify-between text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">
-                <span>{language === 'ar' ? 'نسبة الجودة' : language === 'fr' ? 'Qualité visuelle' : 'Quality Level'}</span>
+                <label htmlFor="image-quality-slider">{language === 'ar' ? 'نسبة الجودة' : language === 'fr' ? 'Qualité visuelle' : 'Quality Level'}</label>
                 <span className="font-mono text-indigo-600 font-bold">{Math.round(quality * 100)}%</span>
               </div>
               <input
+                id="image-quality-slider"
+                name="imageQuality"
                 type="range"
                 min={0.1}
                 max={1.0}

@@ -56,9 +56,9 @@ export const FreeTrafficTab: React.FC = () => {
       contentType: '1000 × 1500 vertical infographic pins, comparison charts (JPEG vs WebP), color swatches.',
       frequency: '2 to 3 pins per week (well-paced, zero spam).',
       examplePost: {
-        en: '📌 How to Reduce Image Size by 80% for Your Blog without losing sharpness! Check our free client-side compressor. 👉 smarttools.app/tool/image-compressor',
-        fr: '📌 Comment réduire la taille de vos photos de 80% pour votre blog sans perte de netteté ! Découvrez notre compresseur gratuit. 👉 smarttools.app/tool/image-compressor',
-        ar: '📌 كيف تقلل حجم صور موقعك ومدونتك بنسبة 80% دون فقدان الدقة مجاناً وبأعلى سرعة. 👉 smarttools.app/tool/image-compressor',
+        en: '📌 How to Reduce Image Size by 80% for Your Blog without losing sharpness! Check our free client-side compressor. 👉 smarttools-um7.pages.dev/tool/image-compressor',
+        fr: '📌 Comment réduire la taille de vos photos de 80% pour votre blog sans perte de netteté ! Découvrez notre compresseur gratuit. 👉 smarttools-um7.pages.dev/tool/image-compressor',
+        ar: '📌 كيف تقلل حجم صور موقعك ومدونتك بنسبة 80% دون فقدان الدقة مجاناً وبأعلى سرعة. 👉 smarttools-um7.pages.dev/tool/image-compressor',
       },
       communityGuidelines: [
         'Always link directly to the relevant tool, never to landing traps.',
@@ -73,9 +73,9 @@ export const FreeTrafficTab: React.FC = () => {
       contentType: 'Genuine answers to users asking "How do I do X without paying?", technical breakdowns.',
       frequency: 'Only when genuinely relevant to an existing question (1-2 times per week max).',
       examplePost: {
-        en: 'I built a 100% client-side QR generator and image compressor because I was tired of shady websites uploading my files to foreign servers. Everything runs via HTML5 Canvas in your browser: smarttools.app',
-        fr: 'J\'ai conçu une suite d\'outils 100% locaux (Web Crypto, Canvas) pour éviter d\'envoyer des fichiers sur des serveurs inconnus. Le code tourne dans le navigateur : smarttools.app',
-        ar: 'قمت بتطوير أدوات تعمل 100% محلياً داخل المتصفح مثل ضغط الصور وتوليد كلمات المرور لحماية الخصوصية دون رفع أي ملفات للسيرفرات: smarttools.app',
+        en: 'I built a 100% client-side QR generator and image compressor because I was tired of shady websites uploading my files to foreign servers. Everything runs via HTML5 Canvas in your browser: smarttools-um7.pages.dev',
+        fr: 'J\'ai conçu une suite d\'outils 100% locaux (Web Crypto, Canvas) pour éviter d\'envoyer des fichiers sur des serveurs inconnus. Le code tourne dans le navigateur : smarttools-um7.pages.dev',
+        ar: 'قمت بتطوير أدوات تعمل 100% محلياً داخل المتصفح مثل ضغط الصور وتوليد كلمات المرور لحماية الخصوصية دون رفع أي ملفات للسيرفرات: smarttools-um7.pages.dev',
       },
       communityGuidelines: [
         'NEVER spam subreddits with promotional links or duplicate copy.',
@@ -90,9 +90,9 @@ export const FreeTrafficTab: React.FC = () => {
       contentType: 'Helpful quick tips, problem-solving tutorials, link in comments when permitted.',
       frequency: '1 to 2 times weekly with community-focused value.',
       examplePost: {
-        en: '💡 Quick tip for website owners: Google loves fast loading speeds. If your blog has large JPEG images, converting them to WebP cuts file sizes by 30%. Free in-browser tool: smarttools.app',
-        fr: '💡 Astuce webmaster : Améliorez la vitesse de votre site en convertissant vos visuels en WebP. Outil 100% gratuit et local : smarttools.app',
-        ar: '💡 نصيحة لأصحاب المواقع: تحويل صور موقعك إلى صيغة WebP يخفض الحجم بنسبة 30% ويسرع التحميل في جوجل. جرب الأداة المجانية: smarttools.app',
+        en: '💡 Quick tip for website owners: Google loves fast loading speeds. If your blog has large JPEG images, converting them to WebP cuts file sizes by 30%. Free in-browser tool: smarttools-um7.pages.dev',
+        fr: '💡 Astuce webmaster : Améliorez la vitesse de votre site en convertissant vos visuels en WebP. Outil 100% gratuit et local : smarttools-um7.pages.dev',
+        ar: '💡 نصيحة لأصحاب المواقع: تحويل صور موقعك إلى صيغة WebP يخفض الحجم بنسبة 30% ويسرع التحميل في جوجل. جرب الأداة المجانية: smarttools-um7.pages.dev',
       },
       communityGuidelines: [
         'Never mass-post into dozens of Facebook groups at once.',

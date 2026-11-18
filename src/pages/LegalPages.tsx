@@ -47,7 +47,7 @@ export const PrivacyPage: React.FC = () => {
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-slate-900 dark:text-white">4. Contacting Us</h2>
           <p>
-            For inquiries regarding privacy, data practices, or security audits, contact us at <code className="text-indigo-600 font-mono">privacy@smarttools.app</code>.
+            For inquiries regarding privacy, data practices, or security audits, contact us at <code className="text-indigo-600 font-mono">support@smarttools-um7.pages.dev</code>.
           </p>
         </section>
       </div>
@@ -74,7 +74,7 @@ export const TermsPage: React.FC = () => {
         <section className="space-y-3">
           <h2 className="text-lg font-bold text-slate-900 dark:text-white">1. Acceptance of Terms</h2>
           <p>
-            By accessing or using SMARTTOOLS (smarttools.app), you agree to be bound by these Terms of Service. If you do not agree, please discontinue using the service.
+            By accessing or using SMARTTOOLS, you agree to be bound by these Terms of Service. If you do not agree, please discontinue using the service.
           </p>
         </section>
 

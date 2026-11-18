@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
@@ -8,6 +8,7 @@ import { PrivacyPage, TermsPage, AboutPage, ContactPage } from './pages/LegalPag
 import { NotFoundPage } from './pages/NotFoundPage';
 import { GrowthCenterLayout } from './pages/growth/GrowthCenterLayout';
 import { AnalyticsService } from './services/analyticsService';
+import { TOOLS_DATA } from './data/toolsData';
 
 // Scroll to top & page view analytics tracker
 const RouteChangeTracker: React.FC = () => {
@@ -58,6 +59,36 @@ export const App: React.FC = () => {
             </PublicLayout>
           }
         />
+
+        {/* Short Tool URL Aliases (Direct redirection to /tool/:toolSlug) */}
+        {Object.entries({
+          'qr-code': 'qr-code-generator',
+          'qr-code-generator': 'qr-code-generator',
+          'image-compressor': 'image-compressor',
+          'compress-image': 'image-compressor',
+          'word-counter': 'word-counter',
+          'password-generator': 'password-generator',
+          'json-formatter': 'json-formatter-validator',
+          'json-formatter-validator': 'json-formatter-validator',
+          'json-validator': 'json-formatter-validator',
+          'base64': 'base64-encoder-decoder',
+          'base64-converter': 'base64-encoder-decoder',
+          'base64-encoder': 'base64-encoder-decoder',
+          'base64-decoder': 'base64-encoder-decoder',
+          'base64-encoder-decoder': 'base64-encoder-decoder',
+          'color-converter': 'color-converter-palette',
+          'color-palette': 'color-converter-palette',
+          'color-converter-palette': 'color-converter-palette',
+          'markdown-preview': 'markdown-to-html-previewer',
+          'markdown-previewer': 'markdown-to-html-previewer',
+          'markdown-to-html-previewer': 'markdown-to-html-previewer',
+        }).map(([alias, targetSlug]) => (
+          <Route
+            key={alias}
+            path={`/${alias}`}
+            element={<Navigate to={`/tool/${targetSlug}`} replace />}
+          />
+        ))}
         <Route
           path="/privacy"
           element={

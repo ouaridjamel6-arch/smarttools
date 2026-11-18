@@ -90,9 +90,12 @@ export const ColorConverterTool: React.FC = () => {
             style={{ backgroundColor: hex }}
           >
             <input
+              id="color-picker-input"
+              name="colorPicker"
               type="color"
               value={hex}
               onChange={(e) => setHex(e.target.value.toUpperCase())}
+              aria-label={language === 'ar' ? 'منتقي الألوان التفاعلي' : language === 'fr' ? 'Sélecteur de couleur interactif' : 'Interactive visual color picker'}
               className="opacity-0 w-full h-full absolute cursor-pointer"
             />
             <span
@@ -149,17 +152,19 @@ export const ColorConverterTool: React.FC = () => {
                 Aa
               </div>
               <div>
-                <span className="text-xs text-slate-500 font-medium block">White Text (#FFFFFF)</span>
+                <span className="text-xs text-slate-500 font-medium block">
+                  {language === 'ar' ? 'نص أبيض (#FFFFFF)' : language === 'fr' ? 'Texte blanc (#FFFFFF)' : 'White Text (#FFFFFF)'}
+                </span>
                 <span className="text-lg font-black text-slate-800">{contrastWhite}:1</span>
               </div>
             </div>
             {contrastWhite >= 4.5 ? (
               <span className="flex items-center gap-1 text-xs font-bold text-emerald-700 bg-emerald-100 px-2.5 py-1 rounded-full">
-                <CheckCircle2 className="w-3.5 h-3.5" /> Pass AA
+                <CheckCircle2 className="w-3.5 h-3.5" /> {language === 'ar' ? 'ناجح AA' : language === 'fr' ? 'Conforme AA' : 'Pass AA'}
               </span>
             ) : (
               <span className="flex items-center gap-1 text-xs font-bold text-rose-700 bg-rose-100 px-2.5 py-1 rounded-full">
-                <XCircle className="w-3.5 h-3.5" /> Fail AA
+                <XCircle className="w-3.5 h-3.5" /> {language === 'ar' ? 'راسب AA' : language === 'fr' ? 'Insuffisant AA' : 'Fail AA'}
               </span>
             )}
           </div>
@@ -171,17 +176,19 @@ export const ColorConverterTool: React.FC = () => {
                 Aa
               </div>
               <div>
-                <span className="text-xs text-slate-400 font-medium block">Black Text (#000000)</span>
+                <span className="text-xs text-slate-400 font-medium block">
+                  {language === 'ar' ? 'نص أسود (#000000)' : language === 'fr' ? 'Texte noir (#000000)' : 'Black Text (#000000)'}
+                </span>
                 <span className="text-lg font-black">{contrastBlack}:1</span>
               </div>
             </div>
             {contrastBlack >= 4.5 ? (
               <span className="flex items-center gap-1 text-xs font-bold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-800">
-                <CheckCircle2 className="w-3.5 h-3.5" /> Pass AA
+                <CheckCircle2 className="w-3.5 h-3.5" /> {language === 'ar' ? 'ناجح AA' : language === 'fr' ? 'Conforme AA' : 'Pass AA'}
               </span>
             ) : (
               <span className="flex items-center gap-1 text-xs font-bold text-rose-400 bg-rose-950/80 px-2.5 py-1 rounded-full border border-rose-800">
-                <XCircle className="w-3.5 h-3.5" /> Fail AA
+                <XCircle className="w-3.5 h-3.5" /> {language === 'ar' ? 'راسب AA' : language === 'fr' ? 'Insuffisant AA' : 'Fail AA'}
               </span>
             )}
           </div>

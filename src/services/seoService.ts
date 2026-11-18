@@ -5,7 +5,17 @@ import { StorageService } from './storage';
 export const SeoService = {
   getBaseUrl(): string {
     const s = StorageService.getSettings();
-    return s.siteBaseUrl || (typeof window !== 'undefined' ? window.location.origin : 'https://smarttools.app');
+    if (s.siteBaseUrl && s.siteBaseUrl.trim() !== '' && s.siteBaseUrl !== 'https://smarttools.app') {
+      return s.siteBaseUrl.replace(/\/$/, '');
+    }
+    if (typeof window !== 'undefined' && window.location && window.location.origin && !window.location.origin.includes('localhost') && !window.location.origin.includes('127.0.0.1')) {
+      return window.location.origin.replace(/\/$/, '');
+    }
+    const envUrl = (typeof process !== 'undefined' && (process.env?.SMARTTOOLS_BASE_URL || process.env?.VITE_SITE_URL)) || (typeof import.meta !== 'undefined' && (import.meta as any).env?.VITE_SITE_URL);
+    if (envUrl) {
+      return String(envUrl).replace(/\/$/, '');
+    }
+    return 'https://smarttools-um7.pages.dev';
   },
 
   // Generate JSON-LD Structured Data
@@ -55,7 +65,7 @@ export const SeoService = {
           '@type': 'ListItem',
           'position': 1,
           'name': 'SMARTTOOLS',
-          'item': baseUrl,
+          'item': effectiveBaseUrl,
         },
         {
           '@type': 'ListItem',

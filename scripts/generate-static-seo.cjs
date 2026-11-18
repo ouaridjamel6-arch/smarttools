@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = process.env.SMARTTOOLS_BASE_URL || 'https://smarttools.app';
+const baseUrl = (process.env.SMARTTOOLS_BASE_URL || process.env.VITE_SITE_URL || process.env.CF_PAGES_URL || 'https://smarttools-um7.pages.dev').replace(/\/$/, '');
 const publicDir = path.join(__dirname, '../public');
 const distDir = path.join(__dirname, '../dist');
 

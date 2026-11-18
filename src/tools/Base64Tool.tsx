@@ -112,14 +112,17 @@ export const Base64Tool: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Input */}
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-          <label className="text-xs font-bold text-slate-500 uppercase tracking-wider block">
-            {mode === 'encode' ? (language === 'ar' ? 'النص الأصلي (Plain Text)' : 'Plain Text Input') : (language === 'ar' ? 'شفرة Base64 المدخلة' : 'Base64 Input')}
+          <label htmlFor="base64-source-input" className="text-xs font-bold text-slate-500 uppercase tracking-wider block cursor-pointer">
+            {mode === 'encode' ? (language === 'ar' ? 'النص الأصلي للتحويل' : language === 'fr' ? 'Texte brut à encoder' : 'Plain Text Input') : (language === 'ar' ? 'شفرة Base64 المدخلة' : language === 'fr' ? 'Code Base64 à décoder' : 'Base64 Input')}
           </label>
           <textarea
+            id="base64-source-input"
+            name="base64Source"
             rows={10}
             value={inputVal}
             onChange={(e) => handleInputChange(e.target.value)}
-            placeholder="Type or paste content here..."
+            placeholder={language === 'ar' ? 'اكتب أو الصق المحتوى هنا...' : language === 'fr' ? 'Tapez ou collez votre contenu ici...' : 'Type or paste content here...'}
+            aria-label={mode === 'encode' ? 'Texte à encoder en Base64' : 'Code Base64 à décoder'}
             className="w-full p-3 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-100 rounded-xl border border-slate-200 focus:ring-2 focus:ring-indigo-500 outline-none leading-relaxed"
           />
         </div>
@@ -128,8 +131,8 @@ export const Base64Tool: React.FC = () => {
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 shadow-sm space-y-3 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-2">
-              <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">
-                {mode === 'encode' ? (language === 'ar' ? 'نتيجة Base64' : 'Base64 Output') : (language === 'ar' ? 'النص المفكوك' : 'Decoded Text Output')}
+              <label htmlFor="base64-result-output" className="text-xs font-bold text-slate-500 uppercase tracking-wider cursor-pointer">
+                {mode === 'encode' ? (language === 'ar' ? 'نتيجة Base64 المرمزة' : language === 'fr' ? 'Résultat Base64' : 'Base64 Output') : (language === 'ar' ? 'النص المفكوك الناتج' : language === 'fr' ? 'Texte décodé' : 'Decoded Text Output')}
               </label>
               <button
                 onClick={handleCopy}
@@ -140,9 +143,12 @@ export const Base64Tool: React.FC = () => {
               </button>
             </div>
             <textarea
+              id="base64-result-output"
+              name="base64Result"
               readOnly
               rows={10}
               value={outputVal}
+              aria-label={mode === 'encode' ? 'Résultat Base64 obtenu' : 'Texte résultant après décodage'}
               className="w-full p-3 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-100 bg-slate-50 rounded-xl border border-slate-200 outline-none leading-relaxed"
             />
           </div>

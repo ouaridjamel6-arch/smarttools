@@ -49,6 +49,8 @@ export const Header: React.FC = () => {
         <div className="hidden md:flex relative flex-1 max-w-xs lg:max-w-md mx-4">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
+            id="header-global-search"
+            name="search"
             type="text"
             value={searchQuery}
             onChange={(e) => {
@@ -57,6 +59,7 @@ export const Header: React.FC = () => {
             }}
             onFocus={() => setSearchOpen(true)}
             placeholder={t('nav.searchPlaceholder')}
+            aria-label={t('nav.searchPlaceholder')}
             className="w-full pl-10 pr-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 border-none text-xs text-slate-800 dark:text-slate-100 outline-none focus:ring-2 focus:ring-indigo-500 transition"
           />
 

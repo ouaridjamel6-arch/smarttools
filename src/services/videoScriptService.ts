@@ -128,8 +128,8 @@ export const VideoScriptService = {
           ar: '🔗 الرابط في البايو • احفظ الفيديو للمستقبل!',
         },
         spokenVoiceover: {
-          en: `Save this video for later and visit smarttools.app today!`,
-          fr: `Enregistrez cette vidéo pour plus tard et visitez smarttools.app dès aujourd'hui !`,
+          en: `Save this video for later and try SMARTTOOLS today!`,
+          fr: `Enregistrez cette vidéo pour plus tard et essayez SMARTTOOLS dès aujourd'hui !`,
           ar: `احفظ الفيديو في المفضلة وجرب الأداة الآن عبر الرابط في البايو!`,
         },
       },

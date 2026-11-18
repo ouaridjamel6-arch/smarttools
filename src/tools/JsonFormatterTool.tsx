@@ -80,12 +80,15 @@ export const JsonFormatterTool: React.FC = () => {
           </button>
 
           <select
+            id="json-indent-select"
+            name="jsonIndentSize"
             value={indentSize}
             onChange={(e) => setIndentSize(Number(e.target.value))}
+            aria-label={language === 'ar' ? 'مسافة المحاذاة' : language === 'fr' ? 'Taille de l\'indentation' : 'Indent Size'}
             className="px-3 py-2 rounded-xl border border-slate-200 text-xs text-slate-700 font-medium"
           >
-            <option value={2}>2 Spaces Indent</option>
-            <option value={4}>4 Spaces Indent</option>
+            <option value={2}>{language === 'ar' ? 'مسافتان للمحاذاة' : language === 'fr' ? 'Indentation 2 espaces' : '2 Spaces Indent'}</option>
+            <option value={4}>{language === 'ar' ? '4 مسافات للمحاذاة' : language === 'fr' ? 'Indentation 4 espaces' : '4 Spaces Indent'}</option>
           </select>
         </div>
 
@@ -127,6 +130,8 @@ export const JsonFormatterTool: React.FC = () => {
       {/* Editor Box */}
       <div className="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
         <textarea
+          id="json-editor-input"
+          name="jsonInput"
           rows={16}
           value={inputJson}
           onChange={(e) => {
@@ -138,8 +143,9 @@ export const JsonFormatterTool: React.FC = () => {
               setErrorMsg(err?.message || 'Syntax error');
             }
           }}
+          aria-label={language === 'ar' ? 'محرر كود JSON' : language === 'fr' ? 'Éditeur de code JSON' : 'JSON code editor'}
           className="w-full p-4 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-100 bg-transparent outline-none resize-y leading-relaxed"
-          placeholder="Paste JSON here..."
+          placeholder={language === 'ar' ? 'الصق كود JSON هنا للتنسيق والفحص...' : language === 'fr' ? 'Collez votre code JSON ici...' : 'Paste JSON here...'}
         />
       </div>
     </div>

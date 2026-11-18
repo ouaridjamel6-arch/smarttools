@@ -3,10 +3,11 @@ import QRCode from 'qrcode';
 import { Download, Copy, Check, Sparkles, RefreshCw } from 'lucide-react';
 import { useI18n } from '../i18n/I18nContext';
 import { AnalyticsService } from '../services/analyticsService';
+import { SeoService } from '../services/seoService';
 
 export const QrCodeTool: React.FC = () => {
   const { t, language } = useI18n();
-  const [text, setText] = useState('https://smarttools.app');
+  const [text, setText] = useState(() => SeoService.getBaseUrl());
   const [fgColor, setFgColor] = useState('#0f172a');
   const [bgColor, setBgColor] = useState('#ffffff');
   const [size, setSize] = useState(320);
@@ -56,10 +57,12 @@ export const QrCodeTool: React.FC = () => {
       {/* Settings / Controls */}
       <div className="lg:col-span-7 space-y-6 bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 shadow-sm">
         <div>
-          <label className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2">
+          <label htmlFor="qr-content-input" className="block text-sm font-semibold text-slate-700 dark:text-slate-200 mb-2">
             {language === 'ar' ? 'الرابط أو النص المراد تحويله' : language === 'fr' ? 'Lien ou texte à encoder' : 'URL or Text to encode'}
           </label>
           <textarea
+            id="qr-content-input"
+            name="qrContent"
             rows={3}
             value={text}
             onChange={(e) => setText(e.target.value)}
@@ -70,11 +73,13 @@ export const QrCodeTool: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
+            <label htmlFor="qr-fg-color" className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
               {language === 'ar' ? 'لون الرمز (Foreground)' : language === 'fr' ? 'Couleur du QR Code' : 'Foreground Color'}
             </label>
             <div className="flex items-center gap-3">
               <input
+                id="qr-fg-color"
+                name="qrFgColor"
                 type="color"
                 value={fgColor}
                 onChange={(e) => setFgColor(e.target.value)}
@@ -85,11 +90,13 @@ export const QrCodeTool: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
+            <label htmlFor="qr-bg-color" className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
               {language === 'ar' ? 'لون الخلفية (Background)' : language === 'fr' ? 'Couleur d\'Arrière-plan' : 'Background Color'}
             </label>
             <div className="flex items-center gap-3">
               <input
+                id="qr-bg-color"
+                name="qrBgColor"
                 type="color"
                 value={bgColor}
                 onChange={(e) => setBgColor(e.target.value)}
@@ -103,10 +110,12 @@ export const QrCodeTool: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
           <div>
             <div className="flex justify-between text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
-              <span>{language === 'ar' ? 'أبعاد الصورة' : language === 'fr' ? 'Taille en pixels' : 'Output Dimension'}</span>
+              <label htmlFor="qr-size-slider">{language === 'ar' ? 'أبعاد الصورة' : language === 'fr' ? 'Taille en pixels' : 'Output Dimension'}</label>
               <span className="font-mono text-indigo-600 font-semibold">{size}px</span>
             </div>
             <input
+              id="qr-size-slider"
+              name="qrSize"
               type="range"
               min={160}
               max={640}
@@ -118,24 +127,30 @@ export const QrCodeTool: React.FC = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
+            <label htmlFor="qr-error-level" className="block text-sm font-medium text-slate-700 dark:text-slate-200 mb-1">
               {language === 'ar' ? 'مستوى تصحيح الأخطاء' : language === 'fr' ? 'Correction d\'erreur' : 'Error Correction'}
             </label>
             <select
+              id="qr-error-level"
+              name="qrErrorLevel"
               value={errorLevel}
               onChange={(e) => setErrorLevel(e.target.value as any)}
               className="w-full px-3 py-2 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 text-slate-800"
             >
-              <option value="L">L — Low (7% recovery)</option>
-              <option value="M">M — Medium (15% recovery)</option>
-              <option value="Q">Q — Quartile (25% recovery)</option>
-              <option value="H">H — High (30% best for print)</option>
+              <option value="L">L — {language === 'ar' ? 'منخفض (7% استعادة)' : language === 'fr' ? 'Faible (7% récup.)' : 'Low (7% recovery)'}</option>
+              <option value="M">M — {language === 'ar' ? 'متوسط (15% استعادة)' : language === 'fr' ? 'Moyen (15% récup.)' : 'Medium (15% recovery)'}</option>
+              <option value="Q">Q — {language === 'ar' ? 'ربعي (25% استعادة)' : language === 'fr' ? 'Quartile (25% récup.)' : 'Quartile (25% recovery)'}</option>
+              <option value="H">H — {language === 'ar' ? 'عالي (30% للطباعة)' : language === 'fr' ? 'Élevé (30% pour impression)' : 'High (30% best for print)'}</option>
             </select>
           </div>
         </div>
 
         <div className="flex flex-wrap gap-2 pt-2">
-          {['https://smarttools.app', 'WIFI:S:MyWifi;T:WPA;P:password;;', 'mailto:contact@smarttools.app'].map((sample) => (
+          {[
+            SeoService.getBaseUrl(),
+            'WIFI:S:MyWifi;T:WPA;P:password;;',
+            `mailto:support@${SeoService.getBaseUrl().replace(/^https?:\/\//, '')}`
+          ].map((sample) => (
             <button
               key={sample}
               type="button"

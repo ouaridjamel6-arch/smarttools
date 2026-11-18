@@ -20,7 +20,7 @@ const site = 'SMARTTOOLS';
 console.log(\`Boost your productivity with \${site}\`);
 \`\`\`
 
-Visit [SMARTTOOLS](https://smarttools.app) to explore all available tools!
+Visit [SMARTTOOLS](https://smarttools-um7.pages.dev) to explore all available tools!
 `;
 
 export const MarkdownTool: React.FC = () => {
@@ -108,7 +108,7 @@ export const MarkdownTool: React.FC = () => {
       <div className="flex flex-wrap items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 shadow-sm">
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-            {language === 'ar' ? 'محرر Markdown المزدوج' : 'Split-View Markdown Workspace'}
+            {language === 'ar' ? 'محرر Markdown المزدوج' : language === 'fr' ? 'Espace Markdown Scindé' : 'Split-View Markdown Workspace'}
           </span>
         </div>
 
@@ -121,7 +121,7 @@ export const MarkdownTool: React.FC = () => {
               }`}
             >
               <Eye className="w-3.5 h-3.5" />
-              <span>Visual</span>
+              <span>{language === 'ar' ? 'معاينة مرئية' : language === 'fr' ? 'Visuel' : 'Visual'}</span>
             </button>
             <button
               onClick={() => setViewTab('html')}
@@ -130,7 +130,7 @@ export const MarkdownTool: React.FC = () => {
               }`}
             >
               <Code className="w-3.5 h-3.5" />
-              <span>HTML</span>
+              <span>{language === 'ar' ? 'كود HTML' : language === 'fr' ? 'Code HTML' : 'HTML'}</span>
             </button>
           </div>
 
@@ -139,11 +139,13 @@ export const MarkdownTool: React.FC = () => {
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-xs font-medium text-slate-700 transition"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-            <span>{copied ? t('common.copied') : 'Copy HTML'}</span>
+            <span>{copied ? t('common.copied') : (language === 'ar' ? 'نسخ HTML' : language === 'fr' ? 'Copier HTML' : 'Copy HTML')}</span>
           </button>
 
           <button
             onClick={handleDownload}
+            title={language === 'ar' ? 'تحميل ملف HTML' : language === 'fr' ? 'Télécharger le fichier HTML' : 'Download HTML file'}
+            aria-label={language === 'ar' ? 'تحميل كود HTML' : language === 'fr' ? 'Télécharger le code HTML' : 'Download compiled HTML'}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition"
           >
             <Download className="w-3.5 h-3.5" />
@@ -156,13 +158,17 @@ export const MarkdownTool: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Input */}
         <div className="bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 shadow-sm">
-          <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">
-            Markdown Source
+          <label htmlFor="markdown-source-input" className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2 cursor-pointer">
+            {language === 'ar' ? 'مصدر Markdown' : language === 'fr' ? 'Code Source Markdown' : 'Markdown Source'}
           </label>
           <textarea
+            id="markdown-source-input"
+            name="markdownSource"
             rows={18}
             value={markdown}
             onChange={(e) => setMarkdown(e.target.value)}
+            aria-label={language === 'ar' ? 'محرر لغة Markdown' : language === 'fr' ? 'Éditeur de code Markdown' : 'Markdown source code editor'}
+            placeholder={language === 'ar' ? 'اكتب كود Markdown هنا...' : language === 'fr' ? 'Tapez votre Markdown ici...' : 'Type your Markdown here...'}
             className="w-full p-3 font-mono text-xs sm:text-sm text-slate-800 dark:text-slate-100 rounded-xl border border-slate-200 outline-none leading-relaxed resize-y"
           />
         </div>
@@ -177,7 +183,7 @@ export const MarkdownTool: React.FC = () => {
           ) : (
             <div>
               <label className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">
-                Compiled HTML Output
+                {language === 'ar' ? 'كود HTML المُصرّف' : language === 'fr' ? 'Sortie HTML Compilée' : 'Compiled HTML Output'}
               </label>
               <pre className="p-4 bg-slate-50 border border-slate-200 rounded-xl font-mono text-xs text-slate-800 whitespace-pre-wrap leading-relaxed overflow-x-auto">
                 {htmlOutput}

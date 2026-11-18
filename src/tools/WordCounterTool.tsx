@@ -108,9 +108,9 @@ export const WordCounterTool: React.FC = () => {
       {/* Editor & Actions */}
       <div className="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
         <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-          <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+          <label htmlFor="word-counter-input" className="text-sm font-semibold text-slate-700 dark:text-slate-200 cursor-pointer">
             {language === 'ar' ? 'محرر النصوص التفاعلي' : language === 'fr' ? 'Éditeur de texte en direct' : 'Live Text Editor'}
-          </span>
+          </label>
           <div className="flex gap-2">
             <button
               onClick={handleCopy}
@@ -130,10 +130,13 @@ export const WordCounterTool: React.FC = () => {
         </div>
 
         <textarea
+          id="word-counter-input"
+          name="textToAnalyze"
           rows={10}
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={language === 'ar' ? 'اكتب أو الصق النص هنا لحسابه وتحليله...' : language === 'fr' ? 'Tapez ou collez votre texte ici...' : 'Type or paste your text here to count...'}
+          aria-label={language === 'ar' ? 'محرر النصوص لحساب الكلمات' : language === 'fr' ? 'Éditeur de texte pour le comptage de mots' : 'Text input for word and character counting'}
           className="w-full p-4 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition text-slate-800 leading-relaxed font-sans text-base"
         />
       </div>
