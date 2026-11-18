@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Globe, Shield, Sparkles, Menu, X, Search, Wrench } from 'lucide-react';
 import { useI18n } from '../i18n/I18nContext';
 import { Language } from '../types';
@@ -11,6 +11,19 @@ export const Header: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleWrenchClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const el = document.getElementById('tools-grid');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { scrollToTools: true } });
+    }
+  };
 
   const handleLangChange = (newLang: Language) => {
     setLanguage(newLang);
@@ -30,20 +43,26 @@ export const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-4">
-        {/* Brand Logo */}
-        <Link to="/" className="flex items-center gap-3 shrink-0 group">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-100 group-hover:scale-105 transition">
+        {/* Brand Logo & Tools Shortcut */}
+        <div className="flex items-center gap-3 shrink-0">
+          <button
+            type="button"
+            onClick={handleWrenchClick}
+            className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-700 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-100 hover:scale-105 active:scale-95 transition cursor-pointer"
+            title={t('nav.toolsShortcut')}
+            aria-label={t('nav.toolsShortcut')}
+          >
             <Wrench className="w-5 h-5 text-white" />
-          </div>
-          <div>
+          </button>
+          <Link to="/" className="group">
             <span className="text-xl font-black tracking-tight text-slate-900 dark:text-white flex items-center gap-1.5">
               SMART<span className="text-indigo-600">TOOLS</span>
             </span>
             <span className="text-[10px] font-semibold text-slate-400 block -mt-1 tracking-wider uppercase">
               Free • Private • Fast
             </span>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
         {/* Search Bar (Desktop) */}
         <div className="hidden md:flex relative flex-1 max-w-xs lg:max-w-md mx-4">

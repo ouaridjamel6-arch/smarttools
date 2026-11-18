@@ -9,6 +9,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.growthCenter': 'Growth Center',
     'nav.language': 'Language',
     'nav.searchPlaceholder': 'Search tools (e.g., QR, Image, Words)...',
+    'nav.toolsShortcut': 'Jump to tools grid',
     'nav.admin': 'Admin Growth Hub',
 
     // Hero
@@ -94,6 +95,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.growthCenter': 'Centre de Croissance',
     'nav.language': 'Langue',
     'nav.searchPlaceholder': 'Rechercher un outil (ex. QR, Image, Mots)...',
+    'nav.toolsShortcut': 'Accéder directement aux outils',
     'nav.admin': 'Hub Marketing Admin',
 
     // Hero
@@ -179,6 +181,7 @@ export const TRANSLATIONS: Record<Language, Record<string, string>> = {
     'nav.growthCenter': 'مركز النمو والتسويق',
     'nav.language': 'اللغة',
     'nav.searchPlaceholder': 'ابحث عن أداة (مثل: QR، ضغط الصور، عداد الكلمات)...',
+    'nav.toolsShortcut': 'انتقل مباشرة إلى قائمة الأدوات',
     'nav.admin': 'إدارة مركز النمو',
 
     // Hero

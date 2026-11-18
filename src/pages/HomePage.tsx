@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import {
   QrCode,
   Image as ImageIcon,
@@ -25,8 +25,25 @@ import { SeoService } from '../services/seoService';
 
 export const HomePage: React.FC = () => {
   const { t, language } = useI18n();
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
+
+  useEffect(() => {
+    const shouldScroll =
+      Boolean((location.state as { scrollToTools?: boolean } | null)?.scrollToTools) ||
+      location.hash === '#tools-grid';
+
+    if (shouldScroll) {
+      const timer = setTimeout(() => {
+        const el = document.getElementById('tools-grid');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
 
   const getToolIcon = (iconName: string) => {
     switch (iconName) {
