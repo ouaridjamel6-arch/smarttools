@@ -1,11 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-// Base URL can be overridden by environment variable SMARTTOOLS_BASE_URL
 const baseUrl = process.env.SMARTTOOLS_BASE_URL || 'https://smarttools.app';
 const publicDir = path.join(__dirname, '../public');
+const distDir = path.join(__dirname, '../dist');
 
-// Static routes
 const staticPages = [
   { path: '', changefreq: 'daily', priority: '1.0' },
   { path: '/privacy', changefreq: 'monthly', priority: '0.4' },
@@ -82,4 +81,13 @@ Sitemap: ${baseUrl}/sitemap.xml
 
 fs.writeFileSync(path.join(publicDir, 'robots.txt'), robots, 'utf8');
 
-console.log('Generated public/sitemap.xml and public/robots.txt successfully.');
+// If dist directory exists, copy directly to dist
+if (fs.existsSync(distDir)) {
+  fs.writeFileSync(path.join(distDir, 'sitemap.xml'), xml, 'utf8');
+  fs.writeFileSync(path.join(distDir, 'robots.txt'), robots, 'utf8');
+  if (fs.existsSync(path.join(publicDir, '_redirects'))) {
+    fs.copyFileSync(path.join(publicDir, '_redirects'), path.join(distDir, '_redirects'));
+  }
+}
+
+console.log('Generated sitemap.xml and robots.txt in public/ and dist/ successfully.');
